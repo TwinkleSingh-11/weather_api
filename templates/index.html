@@ -1,0 +1,15 @@
+Weather
+Enter city name...
+ Search
+{% if error %}
+{{ error }}
+{% endif %} {% if weather %}
+{{ place.name }} {% if place.country %}, {{ place.country }}{% endif %}
+{{ weather.temperature }}°C
+Wind {{ weather.windspeed }} km/h
+Humidity {{ weather.humidity }}%
+Feels Like {{ weather.feels_like }}°C
+Expected Rain {{ weather.daily_rain }} mm
+Chance of Rain {{ weather.rain_chance }}%
+AQI {{ weather.aqi }}
+{% endif %}
